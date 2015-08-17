@@ -1,4 +1,4 @@
-package com.restaurant.jersey;
+package com.restaurant.configuration;
 
 
 import org.glassfish.jersey.server.ResourceConfig;
@@ -6,7 +6,6 @@ import org.glassfish.jersey.server.ResourceConfig;
 
 public class JerseyApplication extends ResourceConfig {
 	public JerseyApplication() {
-		register(com.restaurant.controller.OrderController.class);
 		packages("com.restaurant.controller");
 	}
 	

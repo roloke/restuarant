@@ -1,9 +1,7 @@
     <jboss-deployment-structure>
         <deployment>
             <exclusions>
-				
-				<module name="org.springframework"/>
-				<module name="javaee.api" />
+ 				<module name="javaee.api" />
   				<module name="javax.ws.rs.api"/>
 				<module name="org.jboss.resteasy.resteasy-atom-provider"/>
 				<module name="org.jboss.resteasy.resteasy-cdi"/>
