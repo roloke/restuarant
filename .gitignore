@@ -4,3 +4,6 @@ build
 .classpath
 .project
 bin/*
+
+#but not these files.
+!build.gradle
