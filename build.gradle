@@ -14,7 +14,10 @@ repositories {
 dependencies {
 
 	compile 'org.glassfish.jersey.ext:jersey-spring3:2.19'
+	compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.19'
+	
     compile 'org.springframework:spring-web:4.1.7.RELEASE'
+    
     
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }

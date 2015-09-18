@@ -9,6 +9,6 @@ public interface MenuService {
 
 	public List<FoodItem> getMenu();
 	
-	public List<FoodItem> getSpecialOfTheDay(String dayOfWeek);  
+	public FoodItem getSpecialOfTheDay(String dayOfWeek);  
 
 }
