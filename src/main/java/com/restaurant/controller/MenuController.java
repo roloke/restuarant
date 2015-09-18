@@ -13,7 +13,7 @@ import com.restaurant.services.OrderingService;
 
 
 @Path("welcome") 
-public class OrderController {
+public class MenuController {
 
 	@Autowired
 	private OrderingService orderService;
