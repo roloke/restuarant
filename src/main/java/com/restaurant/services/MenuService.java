@@ -1,8 +1,14 @@
 package com.restaurant.services;
 
- 
-public interface OrderingService {
+import java.util.List;
 
-	public String placeOrder();
+import com.restaurant.domain.FoodItem;
+
+ 
+public interface MenuService {
+
+	public List<FoodItem> getMenu();
+	
+	public List<FoodItem> getSpecialOfTheDay(String dayOfWeek);  
 
 }
