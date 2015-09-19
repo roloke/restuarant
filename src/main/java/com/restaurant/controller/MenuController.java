@@ -1,7 +1,5 @@
 package com.restaurant.controller;
 
-import java.util.List;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -12,9 +10,7 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.restaurant.domain.FoodItem;
 import com.restaurant.services.MenuService;
-
 
 
 @Path("menu") 
