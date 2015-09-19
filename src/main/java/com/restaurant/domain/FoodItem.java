@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
 public class FoodItem {
 
 	//attrbutes
@@ -11,7 +15,8 @@ public class FoodItem {
 	private List<String> ingredients;
 	private BigDecimal cost;
 	
-	public FoodItem(String name, List<String> ingredients, BigDecimal cost) {
+	@JsonCreator
+	public FoodItem(@JsonProperty("name") String name, @JsonProperty("ingredients")List<String> ingredients, @JsonProperty("cost")BigDecimal cost) {
 		super();
 		this.name = name;
 		this.ingredients = ingredients;

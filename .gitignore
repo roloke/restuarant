@@ -7,3 +7,4 @@ bin/*
 
 #but not these files.
 !build.gradle
+/bin/
