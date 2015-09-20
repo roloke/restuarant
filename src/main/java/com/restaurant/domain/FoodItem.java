@@ -16,7 +16,9 @@ public class FoodItem {
 	private BigDecimal cost;
 	
 	@JsonCreator
-	public FoodItem(@JsonProperty("name") String name, @JsonProperty("ingredients")List<String> ingredients, @JsonProperty("cost")BigDecimal cost) {
+	public FoodItem(@JsonProperty("name") String name, 
+			@JsonProperty("ingredients")List<String> ingredients, 
+			@JsonProperty("cost")BigDecimal cost) {
 		super();
 		this.name = name;
 		this.ingredients = ingredients;
