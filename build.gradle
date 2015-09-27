@@ -17,6 +17,7 @@ dependencies {
 	compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.19'
 	
     compile 'org.springframework:spring-web:4.1.7.RELEASE'
+    compile 'org.springframework.amqp:spring-rabbit:1.4.5.RELEASE'
     
     
     testCompile group: 'junit', name: 'junit', version: '4.+'

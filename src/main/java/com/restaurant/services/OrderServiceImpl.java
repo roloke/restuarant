@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.restaurant.domain.FoodItem;
@@ -16,11 +18,15 @@ public class OrderServiceImpl implements OrderService {
 
 	private final Map<String, Order> orders = new HashMap<>();
 	
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+	
 	@Override
 	public String placeOrder(final List<FoodItem> foodItems) {
 		final Order order = new Order();
 		order.setOrderNo(Long.toString(new Date().getTime()));
 		order.setFoodItems(foodItems);
+		rabbitTemplate.convertAndSend("kitchen",order);
 		orders.put(order.getOrderNo(), order);
 		return order.getOrderNo();
 	}
