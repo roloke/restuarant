@@ -19,7 +19,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableRabbit
 @ComponentScan({"com.restaurant.controller", "com.restaurant.services"})
-//@PropertySource("classpath:application.properties")
 public class SpringConfiguration {
 
 	@Bean
