@@ -1,6 +1,7 @@
     <jboss-deployment-structure>
         <deployment>
             <exclusions>
+            	<!-- exclude conatiner version of resteasy. we are using Jersey-->
  				<module name="javaee.api" />
   				<module name="javax.ws.rs.api"/>
 				<module name="org.jboss.resteasy.resteasy-atom-provider"/>
@@ -11,6 +12,9 @@
 				<module name="org.jboss.resteasy.resteasy-jsapi"/>
 				<module name="org.jboss.resteasy.resteasy-multipart-provider"/>
 				<module name="org.jboss.resteasy.async-http-servlet-30"/>
+				<!-- exclude container version of hibernate -->
+				<module name="org.hibernate"  slot="main"/>
+				<module name="javax.persistence.api" slot="main"/>		
             </exclusions>
         </deployment>
     </jboss-deployment-structure>
